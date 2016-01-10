@@ -8,6 +8,7 @@ machine:
 dependencies:
   override:
     - docker info
+    - docker version
     - docker build -t $EXTERNAL_REGISTRY_ENDPOINT/ki/kibana .
 
 
