@@ -1,3 +1,7 @@
 build_image: $REGISTRY/kib/mykibana
+
 before_install:
   - apt-get update
+
+script:
+  - sudo docker version
