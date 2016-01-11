@@ -1,0 +1,11 @@
+build_image: $REGISTRY/kib/mykibana
+before_install:
+  - apt-get update
+  - apt-get install -y docker.io
+install:
+  - docker info
+  - docker version
+  - docker build -t $REGISTRY/kib/mykibana .
+after_success:
+  - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS $REGISTRY
+  - docker push $REGISTRY/kib/mykibana
