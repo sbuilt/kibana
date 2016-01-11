@@ -1,7 +1,6 @@
 build_image: $REGISTRY/kib/mykibana
 before_install:
   - apt-get update
-  - apt-get install -y docker.io
 install:
   - docker info
   - docker version
