@@ -1,5 +1,7 @@
 FROM debian:jessie
 
+RUN docker version
+
 # add our user and group first to make sure their IDs get assigned consistently
 RUN groupadd -r kibana && useradd -r -m -g kibana kibana
 
